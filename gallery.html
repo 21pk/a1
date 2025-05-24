@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Kumar - Full Photography Gallery</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/A-icons8-a-64.png" type="image/x-icon">
+
+    <style>
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #f1f1f100;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #88888800;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #55555500;
+        }
+    </style>
+
+</head>
+
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <!-- <img src="./images/header-bg-color.png" class="w-full"> -->
+    </div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <h1><span class=" text-3xl">R</span>ahul <span class=" text-3xl">K</span>umar</h1>
+
+        <ul
+            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="index.html#top">Home</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="gallery.html">My Gallery</a></li>
+            <li><a href="contact.html">Connect</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <img src="./images/moon_icon.png" class="w-6 dark:hidden">
+                <img src="./images/sun_icon.png" class="w-6 hidden dark:block">
+            </button>
+
+            <a href="contact.html"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full m1-4 font-Ovo dark:border-white/50">
+                Contact
+                <img src="./images/arrow-icon.png" class="w-3 dark:hidden">
+                <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block">
+            </a>
+
+            <button class="block md:hidden ml-3" onclick="openmenu()">
+                <img src="./images/menu-black.png" class="w-6 dark:hidden">
+                <img src="./images/menu-white.png" class="w-6 hidden dark:block">
+            </button>
+
+        </div>
+
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closemenu()">
+                <img src="./images/close-black.png" class="w-5 cursor-pointer dark:hidden">
+                <img src="./images/close-white.png" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="index.html#top" onclick="closemenu()">Home</a></li>
+            <li><a href="index.html#about" onclick="closemenu()">About Me</a></li>
+            <li><a href="index.html#services" onclick="closemenu()">Services</a></li>
+            <li><a href="index.html#work" onclick="closemenu()">My Portfolio</a></li>
+            <li><a href="contact.html" onclick="closemenu()">Connect</a></li>
+        </ul>
+    </nav>
+
+    <div class="w-full px-[12%] py-10 pt-28">
+        <h4 class="text-center mb-2 text-lg font-Ovo">My Complete Collection</h4>
+        <h2 class="text-center text-5xl font-Ovo mb-12">Full Photography Gallery</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Dive into my extensive portfolio, showcasing the breadth of my work across various genres and themes. Each image tells a unique story.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10">
+            <div class="relative overflow-hidden rounded-lg shadow-md group">
+                <img src="./images/Tictactoe.jpg" alt="Vibrant Indian Wedding Moment" class="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold text-center px-4">Indian Weddings</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-md group">
+                <img src="./images/QrCodeG.jpg" alt="Serene Rural Indian Landscape" class="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold text-center px-4">Rural Landscapes</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-md group">
+                <img src="./images/BookPub.jpg" alt="Colorful Indian Festival Scene" class="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold text-center px-4">Festivals & Culture</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-md group">
+                <img src="./images/Tea-Garden.jpg" alt="Candid Indian Street Life" class="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold text-center px-4">Street Photography</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-md group">
+                <img src="./images/Profile.jpg" alt="Professional Portrait of Rahul Kumar" class="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold text-center px-4">Studio Portraits</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-md group">
+                <img src="./images/download.png" alt="Behind the scenes shot of photography setup" class="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p class="text-white text-lg font-semibold text-center px-4">Behind the Lens</p>
+                </div>
+            </div>
+
+            </div>
+    </div>
+
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="./images/port_logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+            <img src="./images/port_logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+                <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+                rahulkumar.photo@example.com
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <p>2024 © Rahul Kumar - All Rights Reserved.</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><a href="https://www.instagram.com/official_anam_ali/" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/anamuddinahmad" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/anamuddinahmad" target="_blank">Linkedin</a></li>
+                <li><a href="https://leetcode.com/u/anamuddinahmad/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        // Adjust navigation links to point back to index.html with section IDs
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') !== '#contact') { // Don't change the current page's contact link
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = 'index.html' + this.getAttribute('href');
+                });
+            }
+        });
+        document.querySelectorAll('#sideMenu a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') !== '#contact') { // Don't change the current page's contact link
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = 'index.html' + this.getAttribute('href');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

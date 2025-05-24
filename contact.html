@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Rahul Kumar - Photographer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/A-icons8-a-64.png" type="image/x-icon">
+
+    <style>
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #f1f1f100;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #88888800;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #55555500;
+        }
+    </style>
+
+</head>
+
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <!-- <img src="./images/header-bg-color.png" class="w-full"> -->
+    </div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <h1><span class=" text-3xl">R</span>ahul <span class=" text-3xl">K</span>umar</h1>
+
+        <ul
+            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="index.html#top">Home</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="gallery.html">My Gallery</a></li>
+            <li><a href="#contact">Connect</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <img src="./images/moon_icon.png" class="w-6 dark:hidden">
+                <img src="./images/sun_icon.png" class="w-6 hidden dark:block">
+            </button>
+
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full m1-4 font-Ovo dark:border-white/50">
+                Contact
+                <img src="./images/arrow-icon.png" class="w-3 dark:hidden">
+                <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block">
+            </a>
+
+            <button class="block md:hidden ml-3" onclick="openmenu()">
+                <img src="./images/menu-black.png" class="w-6 dark:hidden">
+                <img src="./images/menu-white.png" class="w-6 hidden dark:block">
+            </button>
+
+        </div>
+
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closemenu()">
+                <img src="./images/close-black.png" class="w-5 cursor-pointer dark:hidden">
+                <img src="./images/close-white.png" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="index.html#top" onclick="closemenu()">Home</a></li>
+            <li><a href="index.html#about" onclick="closemenu()">About Me</a></li>
+            <li><a href="index.html#services" onclick="closemenu()">Services</a></li>
+            <li><a href="index.html#work" onclick="closemenu()">My Portfolio</a></li>
+            <li><a href="#contact" onclick="closemenu()">Connect</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto pt-32 flex flex-col items-center justify-center gap-4">
+        <h2 class="text-5xl font-Ovo mb-8 mt-20">Get in Touch with Rahul Kumar</h2>
+        <p class="max-w-2xl mx-auto font-Ovo mb-12">I'm always excited to hear about new projects and collaborations. Feel free to reach out directly using the details below or fill out the contact form.</p>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 w-full mb-12">
+            <div class="flex flex-col items-center text-center p-6 border rounded-lg shadow-sm dark:border-white/50 dark:bg-darkHover/30">
+                <img src="./images/mail_icon_dark.png" class="w-10 mb-4 dark:block hidden">
+                <img src="./images/mail_icon.png" class="w-10 mb-4 dark:hidden">
+                <h3 class="text-xl font-semibold mb-2">Email</h3>
+                <a href="mailto:rahulkumar.photo@example.com" class="text-blue-500 hover:underline">rahulkumar.photo@example.com</a>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-6 border rounded-lg shadow-sm dark:border-white/50 dark:bg-darkHover/30">
+                <img src="./images/logo_p.png" class="w-10 mb-4 dark:block hidden">
+                <img src="./images/logo_p.png" class="w-10 mb-4 dark:hidden">
+                <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                <a href="tel:+919876543210" class="text-blue-500 hover:underline">+91 98765 43210</a>
+                <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:underline mt-2 flex items-center gap-1">
+                    <img src="./images/hand-icon copy 4.png" class="w-5"> WhatsApp
+                </a>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-6 border rounded-lg shadow-sm dark:border-white/50 dark:bg-darkHover/30">
+                <img src="./images/mail_icon.png" class="w-10 mb-4 dark:block hidden">
+                <img src="./images/mail_icon.png" class="w-10 mb-4 dark:hidden">
+                <h3 class="text-xl font-semibold mb-2">Address</h3>
+                <p class="text-gray-600 dark:text-white/80">3, behind Lucky Kirana Shop,</p>
+                <p class="text-gray-600 dark:text-white/80">Marathi Mohalla, Ahilya Paltan,</p>
+                <p class="text-gray-600 dark:text-white/80">Indore, Madhya Pradesh 452006, India</p>
+                <a href="https://maps.app.goo.gl/YourActualGoogleMapsLink" target="_blank" class="text-blue-500 hover:underline mt-2">View on Map</a>
+            </div>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="max-w-2xl mx-auto w-full">
+
+            <input type="hidden" name="access_key" value="cea0bbe0-1384-4be2-9d7c-f57558a556f1">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8">
+                <input type="text" placeholder="Your Name"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+                    required name="name">
+
+                <input type="email" placeholder="Your Email"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+                    required name="email">
+            </div>
+            <textarea rows="6" name="message" placeholder="Your Message or Inquiry"
+                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
+                required></textarea>
+
+            <button
+                class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Send
+                Message
+                <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            </button>
+        </form>
+    </div>
+
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="./images/port_logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+            <img src="./images/port_logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+                <img src="./images/download-icon.png" alt="" class="w-6 hidden dark:block">
+                rahulkumar.photo@example.com
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <p>2024 © Rahul Kumar - All Rights Reserved.</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><a href="https://www.instagram.com/official_anam_ali/" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/anamuddinahmad" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/anamuddinahmad" target="_blank">Linkedin</a></li>
+                <li><a href="https://leetcode.com/u/anamuddinahmad/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        // Adjust navigation links to point back to index.html with section IDs
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') !== '#contact') { // Don't change the current page's contact link
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = 'index.html' + this.getAttribute('href');
+                });
+            }
+        });
+        document.querySelectorAll('#sideMenu a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') !== '#contact') { // Don't change the current page's contact link
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.location.href = 'index.html' + this.getAttribute('href');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
